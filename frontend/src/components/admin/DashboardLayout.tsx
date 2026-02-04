@@ -55,7 +55,8 @@ export function DashboardLayout() {
                     {/* Logo */}
                     <div className="flex items-center justify-between h-16 px-4 border-b border-gray-800">
                         <Link to="/dashboard" className="flex items-center gap-2">
-                            <img src="/logo.svg" alt="Logo" className="h-6" />
+                            <img src="/logo-mark.svg" alt="Logo" className="h-6" />
+                            <span className="text-xl font-semibold">Anything.ai</span>
                         </Link>
                         <button
                             onClick={() => setSidebarOpen(false)}

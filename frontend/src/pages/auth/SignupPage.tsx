@@ -68,8 +68,9 @@ export function SignupPage() {
         <div className="min-h-screen bg-black flex items-center justify-center px-4 py-8">
             <div className="w-full max-w-md">
                 <div className="text-center mb-8">
-                    <Link to="/" className="inline-block">
-                        <img src="/logo-mark.svg" alt="Logo" className="h-8 mx-auto" />
+                    <Link to="/" className="inline-flex items-center justify-center gap-2 text-xl font-semibold text-white">
+                        <img src="/logo-mark.svg" alt="Logo" className="h-7" />
+                        Anything.ai
                     </Link>
                     <h1 className="text-2xl font-bold mt-6 text-white">Create your account</h1>
                     <p className="text-gray-400 mt-2">Get started with Anything.ai</p>

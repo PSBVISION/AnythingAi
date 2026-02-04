@@ -1,4 +1,5 @@
 import { ArrowDownRightIcon, StarIcon, ShieldCheckIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
     return (
@@ -15,22 +16,15 @@ export const HeroSection = () => {
                     Designed for banks, governments, and regulated enterprises — where trust, auditability, and real-world impact matter most.
                 </p>
                 <div className="mt-8 flex items-center justify-center gap-4">
-                    <button className="bg-primary hover:bg-secondary transition duration-300 text-black px-6 py-2.5 rounded-lg">
+                    <Link to="/dashboard" className="bg-primary hover:bg-secondary transition duration-300 text-black px-6 py-2.5 rounded-lg">
                         Book a Free Demo
-                    </button>
+                    </Link>
                     <button className="border border-gray-600 text-zinc-300 px-4 py-2.5 rounded-lg hover:bg-gray-900">
                         See It in Action
                         <ArrowDownRightIcon className="ml-1 size-5 inline-flex" />
                     </button>
                 </div>
                 <div className="mt-10 flex items-center justify-center gap-2">
-                    <img
-                        src="/rating-logo-mark.svg"
-                        alt="rating logo"
-                        width={100}
-                        height={100}
-                        className="size-5"
-                    />
                     <div className="flex items-center">
                         {...Array(5).fill(0).map((_, i) => (
                             <StarIcon key={i} className="size-4 fill-yellow-500 text-yellow-500" />

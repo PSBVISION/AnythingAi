@@ -7,10 +7,10 @@ export const Navbar = () => {
 
     const links = [
         { name: "Home", href: "/" },
-        { name: "Solutions", href: "/solutions" },
-        { name: "Use Cases", href: "/use-cases" },
-        { name: "Features", href: "/features" },
-        { name: "About", href: "/about" },
+        { name: "Solutions", href: "/" },
+        { name: "Use Cases", href: "/" },
+        { name: "Features", href: "/" },
+        { name: "About", href: "/" },
     ];
 
     return (
@@ -27,9 +27,9 @@ export const Navbar = () => {
                     </li>
                 ))}
             </ul>
-            <button className="max-md:hidden bg-primary hover:bg-secondary transition duration-300 text-black px-6 py-2.5 rounded-lg">
+            <Link to="/dashboard" className="max-md:hidden bg-primary hover:bg-secondary transition duration-300 text-black px-6 py-2.5 rounded-lg">
                 Book a Demo
-            </button>
+            </Link>
             <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
                 <MenuIcon className="size-6" />
             </button>

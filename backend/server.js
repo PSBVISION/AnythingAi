@@ -31,15 +31,16 @@ app.get('/api/health', (req, res) => {
     res.json({ success: true, message: 'Server is running' });
 });
 
-// 404 handler
-app.use((req, res) => {
-    errorResponse(res, 404, 'Route not found');
-});
-
-// Error handling middleware
+// Error handling middleware (must have 4 parameters)
 app.use((err, req, res, next) => {
+    console.error('Error:', err.message);
     console.error(err.stack);
     errorResponse(res, err.statusCode || 500, err.message || 'Something went wrong!');
+});
+
+// 404 handler (must be last)
+app.use((req, res) => {
+    errorResponse(res, 404, 'Route not found');
 });
 
 const PORT = process.env.PORT || 5000;
